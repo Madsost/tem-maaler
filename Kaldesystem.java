@@ -1,12 +1,12 @@
 
 public class Kaldesystem {
 
-	public static void TilkaldLæge(){
-		System.out.println("\tLæge tilkaldt\n");
-		// Gør noget mere?
+	public static void TilkaldLÃ¦ge(){
+		System.out.println("\tLï¿½ge tilkaldt\n");
+		// Gï¿½r noget mere?
 	}
 	public static void TilkaldSygeplj(){
 		System.out.println("\tSygeplejerske tilkaldt\n");
-		// Tænd en lampe også?
+		// Tï¿½nd en lampe ogsï¿½?
 	}
 }

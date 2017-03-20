@@ -5,14 +5,14 @@ public class Sensor{
 		//private double value = 0.0;
 		private Double resultat = new Double(0);
 		private SerialPort serialPort;
-		private String måling = "";
+		private String mÃ¥ling = "";
 		
 		// Test-sensor attributter
 		private final int START = 168;
 		private final double DELTAMAX = 0.25;
 		private double value = START;
 		
-		/** Standard-konstruktør*/
+		/** Standard-konstruktï¿½r*/
 		public Sensor(){
 			setup();
 		}
@@ -22,10 +22,10 @@ public class Sensor{
 				if (serialPort.getInputBufferBytesCount() > 0)
 				{	
 					Thread.sleep(1000);
-					måling = "";
-					måling = serialPort.readString();
-					måling = måling.substring(2, 6);
-					resultat = Double.parseDouble(måling);
+					mÃ¥ling = "";
+					mÃ¥ling = serialPort.readString();
+					mÃ¥ling = mÃ¥ling.substring(2, 6);
+					resultat = Double.parseDouble(mÃ¥ling);
 					return resultat;
 				}
 				//else return 0;

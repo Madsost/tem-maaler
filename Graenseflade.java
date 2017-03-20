@@ -1,7 +1,7 @@
 public class Graenseflade implements Runnable {
 	//indeholder vores main metode
 	
-	private double måling = 0;
+	private double mÃ¥ling = 0;
 	
 	public Graenseflade(){
 		setMinMax();
@@ -17,12 +17,12 @@ public class Graenseflade implements Runnable {
 				System.out.println("Der skete en fejl!");
 				e.printStackTrace();
 			}
-			this.måling = Monitor.getConValue();	
-			System.out.println("Målt værdi i celcius: " +måling+ " °C");
+			this.mÃ¥ling = Monitor.getConValue();	
+			System.out.println("Mï¿½lt vï¿½rdi i celcius: " +mÃ¥ling+ " ï¿½C");
 			}
 		}
 	
-	/** Starter en tråd og kalder run()-metoden */
+	/** Starter en trï¿½d og kalder run()-metoden */
 	public void start() {
 		Thread t = new Thread (this, "Interface");
 		t.start();
@@ -36,13 +36,13 @@ public class Graenseflade implements Runnable {
 	}
 	
 	public static void main(String[] args) {
-		// laver et grænseflade-objekt. Ved instantieringen bliver setMinMax() kaldt
+		// laver et grï¿½nseflade-objekt. Ved instantieringen bliver setMinMax() kaldt
 		Graenseflade i = new Graenseflade();
 		
-		// starter grænsefladen som en parallel tråd
+		// starter grÃ¦nsefladen som en parallel trÃ¥d
 		i.start();
 		
-		// starter monitorens run-metode, som kører som en uendelig løkke 
+		// starter monitorens run-metode, som kÃ¸rer som en uendelig lï¿½kke 
 		Monitor.run();
 		}
 	}
